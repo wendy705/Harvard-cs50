@@ -33,5 +33,5 @@ int get_positive_int(string prompt)
                 }
             printf("\n");
         }
-        return n;
+        return 0;
 }
