@@ -1,25 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_positive_int(string prompt);
+int pyramid(int n);
 
-int main(void)
-{
-    int i = get_positive_int ("Please, enter a number between one and eight: ");
-    printf ("%i\n", i);
+int main(void){
+    int height;
 
+    do {
+        height = get_int("Please enter a number between one and eight: ");
+    } while(height < 1 || height > 8);
+    
+    return pyramid(height);
 }
 
-// Prompt user for positive integer between one and eight
-int get_positive_int(string prompt)
-{
-    int n;
-    do
-    {
-        n = get_int("%s", prompt);
-    }
-    while (n < 1 || n > 8);
-    //return n;
+int pyramid(int n)
+   {
 //Print hashes iteration
     for (int i = 1; i <= n; i++)
         {
@@ -33,5 +28,5 @@ int get_positive_int(string prompt)
                 }
             printf("\n");
         }
-        return 0;
+    return 0;
 }
