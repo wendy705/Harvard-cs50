@@ -25,7 +25,7 @@ int get_positive_int(string prompt)
         {
             for (int j = (n - i); j >= 1; j--)
                 {
-                    printf(".");
+                    printf(" ");
                 }
             for (int k = 1; k < (i + 1); k++)
                 {
