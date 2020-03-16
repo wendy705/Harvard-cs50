@@ -18,10 +18,10 @@ int main (void)
     int n = strlen(text);
 
     //count words
-    if (isalnum(text[0]))
-    {
-        word = 1;
-    }
+    //if (isalnum(text[0]))
+    //{
+        //word = 1;
+    //}
 
     for (int i = 0; i < n;  i++)
     {
