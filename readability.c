@@ -4,9 +4,9 @@
 #include <string.h>
 #include <math.h>
 
-int letter;
-int word;
-int sentence;
+float letter;
+float word;
+float sentence;
 
 int main (void)
 
@@ -17,11 +17,11 @@ int main (void)
     //define lenght of text
     int n = strlen(text);
 
-    //count words
-    //if (isalnum(text[0]))
-    //{
-        //word = 1;
-    //}
+    count words
+    if (isalnum(text[0]))
+    {
+        word = 1;
+    }
 
     for (int i = 0; i < n;  i++)
     {
