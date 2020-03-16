@@ -55,7 +55,7 @@ int main (void)
 
 //debugger
 
-    return("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
+    //print f("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
 
 
 //print result for index
