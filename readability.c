@@ -53,6 +53,10 @@ int main (void)
     float grade = 0.0588 * (100 * letter / word) - 0.296 * (100 * sentence / word) - 15.8;
     int roundgrade = round (grade);
 
+//debugger
+
+    printf("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
+
 
 //print result for index
     if (roundgrade <= 1)
@@ -68,9 +72,5 @@ int main (void)
         printf("Grade 16+\n");
     }
     
-//debugger
-
-    printf("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
-
 
 }
