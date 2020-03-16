@@ -17,7 +17,7 @@ int main (void)
     //define lenght of text
     int n = strlen(text);
 
-    count words
+    //count words
     if (isalnum(text[0]))
     {
         word = 1;
@@ -55,8 +55,7 @@ int main (void)
 
 //debugger
 
-    //print f("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
-
+    //printf("Letters: %i\n Words: %i\n Sentences: %i\n", letter, word, sentence);
 
 //print result for index
     if (roundgrade <= 1)
@@ -71,6 +70,6 @@ int main (void)
     {
         printf("Grade 16+\n");
     }
-    
+
 
 }
