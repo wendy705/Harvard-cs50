@@ -56,7 +56,7 @@ int main (void)
 //apply algorithm for Coleman-Liau index
     
     float grade = 0.0588 * L - 0.296 * S - 15.8;
-    int roundgrade = (grade);
+    int roundgrade = round (grade);
 
 //debugger
 
