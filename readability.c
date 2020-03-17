@@ -50,7 +50,10 @@ int main (void)
 
 //apply algorithm for Coleman-Liau index
 
-    float grade = 0.0588 * (100 * letter / word) - 0.296 * (100 * sentence / word) - 15.8;
+    L = float (100 * letter / word);
+    S = float (100 * sentence / word);
+    
+    float grade = 0.0588 * L - 0.296 * S - 15.8;
     int roundgrade = round (grade);
 
 //debugger
