@@ -8,7 +8,7 @@ int letter;
 int word;
 int sentence;
 
-int main (void)
+int main(void)
 
 {
     //ask user input for text
@@ -56,7 +56,7 @@ int main (void)
 //apply algorithm for Coleman-Liau index
     
     double grade = 0.0588 * L - 0.296 * S - 15.8;
-    int roundgrade = round (grade);
+    int roundgrade = round(grade);
 
 //debugger
 
