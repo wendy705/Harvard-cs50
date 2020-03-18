@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         string s = get_string("Text you'd like to cypher: ");
 
         //print out text once it has been ciphered
-        printf("Ciphertext: ");
+        printf("ciphertext: ");
 
 
         for (int i = 0, n = strlen(s) ; i < n; i++)
