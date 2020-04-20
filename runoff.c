@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-   for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!strcmp(name, candidates[i].name))
         {
@@ -180,7 +180,7 @@ int find_min(void)
     {
         if (candidates[m].eliminated == false && lowestVoteNum > candidates[m].votes)
         {
-             lowestVoteNum = candidates[m].votes;
+            lowestVoteNum = candidates[m].votes;
         }
     }
     return lowestVoteNum;
