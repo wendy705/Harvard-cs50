@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
- // check if the file name was specified
+// check if the file name was specified
     if (argc != 2)
     {
         fprintf(stderr, "Usage: ./recover image\n");
