@@ -4,10 +4,12 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-     float rgbGray;
+    float rgbGray;
 
+    //iterate over each row
     for (int i = 0; i < width; i++)
     {
+        //iterate over each pixel
         for (int j = 0; j < height; j++)
         {
             // averages the color intensity and then applies the same value to all the colors to get gray
@@ -37,8 +39,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     int sepiaBlue;
     int sepiaRed;
     int sepiaGreen;
+    
+    //iterate over each row
     for (int i = 0; i < width; i++)
     {
+        //iterate over each pixel
         for (int j = 0; j < height; j++)
         {
             sepiaBlue = limit(round(0.272 * image[j][i].rgbtRed + 0.534 * image[j][i].rgbtGreen + 0.131 * image[j][i].rgbtBlue));
@@ -81,61 +86,68 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     {
-    int sumBlue;
-    int sumGreen;
-    int sumRed;
-    float counter;
-    //create a temporary table of colors to not alter the calculations
-    RGBTRIPLE temp[height][width];
+        int sumBlue;
+        int sumGreen;
+        int sumRed;
+        float counter;
+        //create a temporary table of colors to not alter the calculations
+        RGBTRIPLE temp[height][width];
 
-    for (int i = 0; i < width; i++)
-    {
-        for (int j = 0; j < height; j++)
+        //iterate over each row
+        for (int i = 0; i < width; i++)
         {
-            sumBlue = 0;
-            sumGreen = 0;
-            sumRed = 0;
-            counter = 0.00;
-
-            // sums values of the pixel and 8 neighboring ones, skips iteration if it goes outside the pic
-            for (int k = -1; k < 2; k++)
+            //iterate over each pixel
+            for (int j = 0; j < height; j++)
             {
-                if (j + k < 0 || j + k > height - 1)
-                {
-                    continue;
-                }
+                sumBlue = 0;
+                sumGreen = 0;
+                sumRed = 0;
+                counter = 0.00;
 
-                for (int h = -1; h < 2; h++)
+                //sums values of the pixel and 8 neighboring ones
+                for (int k = -1; k < 2; k++)
                 {
-                    if (i + h < 0 || i + h > width - 1)
+                    //skip iteration if outside the picture
+                    if (j + k < 0 || j + k > height - 1)
                     {
                         continue;
                     }
 
-                    sumBlue += image[j + k][i + h].rgbtBlue;
-                    sumGreen += image[j + k][i + h].rgbtGreen;
-                    sumRed += image[j + k][i + h].rgbtRed;
-                    counter++;
+                    for (int h = -1; h < 2; h++)
+                    {
+                        //skip iteration if outside the picture
+                        if (i + h < 0 || i + h > width - 1)
+                        {
+                            continue;
+                        }
+
+                        //average of pixel at hand plus neighbouring pixels colours
+                        sumBlue += image[j + k][i + h].rgbtBlue;
+                        sumGreen += image[j + k][i + h].rgbtGreen;
+                        sumRed += image[j + k][i + h].rgbtRed;
+                        counter++;
+                    }
                 }
+
+                // averages the sum to make picture look blurrier
+                temp[j][i].rgbtBlue = round(sumBlue / counter);
+                temp[j][i].rgbtGreen = round(sumGreen / counter);
+                temp[j][i].rgbtRed = round(sumRed / counter);
             }
-
-            // averages the sum to make picture look blurrier
-            temp[j][i].rgbtBlue = round(sumBlue / counter);
-            temp[j][i].rgbtGreen = round(sumGreen / counter);
-            temp[j][i].rgbtRed = round(sumRed / counter);
         }
-    }
 
-    //copies values from temporary table
-    for (int i = 0; i < width; i++)
-    {
-        for (int j = 0; j < height; j++)
+        //copies values from temporary table
+        //iterate over each row
+        for (int i = 0; i < width; i++)
         {
-            image[j][i].rgbtBlue = temp[j][i].rgbtBlue;
-            image[j][i].rgbtGreen = temp[j][i].rgbtGreen;
-            image[j][i].rgbtRed = temp[j][i].rgbtRed;
+            //iterate over each pixel
+            for (int j = 0; j < height; j++)
+            {
+                image[j][i].rgbtBlue = temp[j][i].rgbtBlue;
+                image[j][i].rgbtGreen = temp[j][i].rgbtGreen;
+                image[j][i].rgbtRed = temp[j][i].rgbtRed;
+            }
         }
     }
-}
 }
 
