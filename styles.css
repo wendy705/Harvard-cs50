@@ -1,0 +1,52 @@
+:root {
+  --primary: #557A95;
+  --white: #ffffff;
+  --lightgray: #7f7a80;
+  --mediumgray: #5D5C61;
+  --darkgray: #323135;
+}
+
+body{
+    text-align: center;
+}
+nav{
+    background-color: var(--primary);
+    color: var(--white);
+}
+nav a{
+    color: var(--white);
+}
+nav button{
+    color: var(--lightgray) !important;
+    border-color: var(--lightgray) !important;
+}
+a:hover{
+    color: var(--darkgray);
+}
+#ask{
+    display: none;
+}
+#wait{
+    display: none;
+}
+.btn{
+    color: var(--darkgray) !important;
+    border-color: var(--darkgray) !important;
+
+}
+#thank-you{
+    display: none;
+}
+.form-row{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.form-check{
+    margin-left: auto;
+    margin-right: auto;
+}
+.tell-us{
+    margin-left: auto;
+    margin-right: auto;
+}
