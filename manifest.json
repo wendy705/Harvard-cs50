@@ -1,0 +1,33 @@
+{
+  "name": "Simple To-Do Dashboard",
+
+  "version": "1.0",
+
+  "description": "This Chrome extension reminds the user of their to-do list each time they open a new tab",
+
+  "manifest_version": 2,
+  "incognito": "split",
+
+  "icons": {
+    "128": "icon.png"
+    },
+
+  "background": {
+		"page": "background.html"
+	},
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "Inject sidebar"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+	"permissions": [
+		"tabs"
+	],
+
+	"web_accessible_resources": ["index.html", "main.js", "main.css"]
+}

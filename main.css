@@ -1,0 +1,173 @@
+.settings {
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   transform: translateX(-100%);
+   transition: transform 1s;
+}
+
+.settings-open.settings {
+   transform: none;
+}
+input {
+   padding: 5px;
+   font-size: 12px;
+   width: 150px;
+   height: 20px;
+}
+button {
+   height: 30px;
+   width: 70px;
+   background: none; /* This removes the default background */
+   color: #313131;
+   border: 1px solid #313131;
+   border-radius: 50px; /* This gives our button rounded edges */
+   font-size: 12px;
+   cursor: pointer;
+}
+form {
+   padding-top: 20px;
+}
+
+.greeting-container {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+.greeting {
+   font-family: sans-serif;
+   font-size: 40px;
+   color: #fff;
+}
+body {
+   background-color: #557A95;
+}
+html {
+   height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #99ceff;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #cce6ff;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #336699;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.myClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.myClose:hover {
+  background-color: #4775d1;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #1f3d7a;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+#myInput {
+  margin: 0;
+  border: 1px solid #313131;
+  border-radius: 50px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  height: initial;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #cce6ff;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  /*height: 30px;*/
+  color: #313131;
+  border: 1px solid #313131;
+  border-radius: 50px; /* This gives our button rounded edges */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #66b3ff;
+}
+
